@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Infotech | Professional Installation & Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #f8f9fa;
+            --dark: #212529;
+            --light: #ffffff;
+        }
+
+        body {
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            
+        }
+        
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card {
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+
+        .quote-form {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+        }
+
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            z-index: 999;
+            transition: background 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #0a4bbf;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                  <img src="Logo black.png" alt="Logo" style="width:70px;" class="rounded-pill"> JD INFOTECH</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quote">Get Quote</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Welcome To JD Infotech</h1>
+            <p class="display-5 fw-bold">Professional CCTV Security Solutions & Installation</p>
+            <p class="lead my-4">Protect your home or business with our expert installation and 24/7 monitoring services.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="Dealership.jfif" class="card-img-top" alt="Dealership Service">
+                        <div class="card-body">
+                            <h5 class="card-title">Dealership Service</h5>
+                            <p class="card-text">Our company is committed to providing strong and reliable service to all our core dealers. We believe that dealers are not just business partners, but the backbone of our success. That is why we offer support that goes beyond selling products – it focuses on building long-term and trustworthy relationships.A CCTV dealership is a business that sells, installs, and services closed-circuit television systems. It provides security and surveillance solutions to a wide range of clients, from individual homeowners to large commercial enterprises.Dealerships offer a variety of security and surveillance products, including different types of cameras (like bullet, dome, and PTZ), digital video recorders (DVRs), network video recorders (NVRs), and related accessories.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="CCTV is the perfect choice for businesses wanting….jfif" class="card-img-top" alt="Remote Monitoring">
+                        <div class="card-body">
+                            <h5 class="card-title">CCTV camera Installation, Maintenance and Repair</h5>
+                            <p class="card-text">We are leading CCTV Camera Installation Service Provider with many years of experience in the industry.We provide affordable professional CCTV Camera Installation Service in Patna, Bihar. With our CCTV installation service, we deploy a team of trained and professional technicians to install your cctv surveillance system. Watch cctv camera live online on smartphones, laptops, computers. Regular servicing, cleaning, cable checks, and prompt support for system breakdowns</p>
+                        </div>
+                    </div>
+                </div>   
+                        <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <img src="Sales.jfif" class="card-img-top" alt="Sales & Distribution">
+                        <div class="card-body">
+                            <h5 class="card-title">System Sales and Distribution</h5>
+                            <p class="card-text">Major global brands like Hikvision and Dahua partner with large national or strategic distributors to manage the sales of their extensive product portfolios.With increasing connectivity, CCTV systems are more vulnerable to hacking and data breaches. Distributors and installers must offer robust cybersecurity solutions to maintain customer trust.The market is highly competitive, especially for entry-level products. Manufacturers invest heavily in research and development to innovate and create new competitive advantages.</p>
+                        </div>
+                    </div>
+                
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center section-title">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="Security Services.png" class="img-fluid rounded shadow" alt="Our Team">
+                </div>
+                <div class="col-lg-6">
+                    <h3>Trusted Security Experts Since 2022</h3>
+                    <p class="my-3">Founded in 2022, JD INFOTECH Solution Security and Installation is a trusted provider of advanced security solutions and professional installation services. We specialize in delivering high-quality CCTV systems, access control, alarm solutions, and IT infrastructure setups designed to protect homes, businesses, and organizations.<br>
+                        JD Infotech CCTV has been providing top-tier surveillance solutions to residential and commercial clients for over a decade. Our certified technicians ensure every installation meets the highest industry standards. At JD INFOTECH, we combine innovative technology with expert installation to ensure reliability, safety, and customer satisfaction. Our team is committed to providing tailored solutions that meet the unique needs of every client, whether for residential, commercial, or industrial security requirements.With a strong focus on service excellence and long-term support, we aim to be a one-stop destination for complete security and IT installation solutions.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Licensed & Insured Technicians</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> 24/7 Emergency Support</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Free On-Site Consultations</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline-primary">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Customer Feedback</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="download (1).png" class="rounded-circle me-3" width="60" height="60" alt="Customer">
+                            <div>
+                                <h6 class="mb-0"></h6>
+                                <small></small>
+                            </div>
+                        </div>
+                        <p class="fst-italic">"JD Infotech installed cameras at my warehouse. The quality is outstanding and their team was professional from start to finish. Highly recommend!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="download (1).png" class="rounded-circle me-3" width="60" height="60" alt="Customer">
+                            <div>
+                                <h6 class="mb-0"></h6>
+                                <small></small>
+                            </div>
+                        </div>
+                        <p class="fst-italic">"After a break-in, I called JD Infotech. They came the same day, assessed my needs, and installed a perfect system. Now I sleep peacefully."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="download (1).png" class="rounded-circle me-3" width="60" height="60" alt="Customer">
+                            <div>
+                                <h6 class="mb-0"></h6>
+                                <small></small>
+                            </div>
+                        </div>
+                        <p class="fst-italic">"The remote viewing feature is amazing! I can check on my restaurant anytime from my phone. Great customer service too."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="bg-primary text-white">
+        <div class="container">
+            <h2 class="text-center section-title text-white">Request a Free Quote</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="quote-form bg-white text-dark p-4 p-md-5 rounded">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="property" class="form-label">Property Type</label>
+                                    <select class="form-select" id="property" required>
+                                        <option selected disabled>Choose...</option>
+                                        <option>Residential Home</option>
+                                        <option>Apartment</option>
+                                        <option>Office Building</option>
+                                        <option>Retail Store</option>
+                                        <option>Restaurant</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Tell Us </label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Number of cameras needed, areas to cover, special requirements..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center section-title">Contact Us</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4><i class="fas fa-map-marker-alt me-2"></i> Visit Our Office</h4>
+                            <p>JD Infotech, 2nd Floor, Ambika Motor Market, Kankarbagh Main Rd<br>Opposite Bikaner Sweets, adjacent Peter England Showroom, Ghrounda, Patna, Bihar 800020<br>Patna, Bihar</p>
+                            <hr>
+                            <h4><i class="fas fa-phone-alt me-2"></i> Call Us</h4>
+                            <p>8292723058 & 7004383417<br>Emergency: 8292723058 </p>
+                            <hr>
+                            <h4><i class="fas fa-envelope me-2"></i> Email Us</h4>
+                            <p>jdinfotech2022@gmail.com<br>jdinfotech2022@gmail.com</p>
+                            <hr>
+                            <h4><i class="fas fa-clock me-2"></i> Business Hours</h4>
+                            <p>Monday - Friday: 11:00 AM - 6:00 PM<br>Saturday: 11:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d57568.62373066852!2d85.11000655191408!3d25.603620832136638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x39ed5916cb111637%3A0x1eb8d603bbabe79!2s2nd%20Floor%2C%20Ambika%20Motor%20Market%2C%20Kankarbagh%20Main%20Rd%2C%20opposite%20Bikaner%20Sweets%2C%20adjacent%20Peter%20England%20Showroom%2C%20Ghrounda%2C%20Patna%2C%20Bihar%20800020!3m2!1d25.6035492!2d85.1512065!4m0!5e0!3m2!1sen!2sin!4v1757926067473!5m2!1sen!2sin" 
+                        width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="navbar-brand mb-3">JD INFOTECH</h4>
+                    <p>Providing peace of mind through professional security camera installation and monitoring services since 2022.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-decoration-none text-white">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-decoration-none text-white">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-decoration-none text-white">About</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-decoration-none text-white">Testimonials</a></li>
+                        <li class="mb-2"><a href="#quote" class="text-decoration-none text-white">Get Quote</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-decoration-none text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white">Dealership Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white">Remote Monitoring</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white">System Upgrades</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white">Maintenance Plans</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white">Emergency Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">Newsletter</h5>
+                    <p>Subscribe for security tips and exclusive offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 JD Infotech CCTV. All Rights Reserved.| Devloped by Aditi Kumari | <a href="#" class="text-decoration-none text-white">Privacy Policy</a> | <a href="#" class="text-decoration-none text-white">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission (prevent default for demo)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your quote request has been submitted. We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
